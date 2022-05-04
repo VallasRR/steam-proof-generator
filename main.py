@@ -7,8 +7,6 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import uvicorn
 from fastapi import FastAPI, Request, Form
-from fastapi.responses import HTMLResponse
-from fastapi.templating import Jinja2Templates
 import sentry_sdk
 from sentry_sdk import start_transaction
 import os
