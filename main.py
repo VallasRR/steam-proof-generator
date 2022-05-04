@@ -54,7 +54,7 @@ def proof_creator(name, steamid, purchasedate):
         }
         return error_code
 
-    except Exception as error:
+    except Exception as Error:
         error_code = {
             "error": True,
             "errorCode": (str(error)),
