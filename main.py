@@ -6,10 +6,9 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import uvicorn
-from fastapi import FastAPI, Request, Form
+from fastapi import Request, Form
 import sentry_sdk
 from sentry_sdk import start_transaction
-import os
 
 sentry_sdk.init(
     dsn=f"{sentry_key}",
