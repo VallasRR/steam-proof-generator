@@ -73,7 +73,7 @@ def proof_creator(name, steamid, purchasedate):
         f'<span class="notification_count">{notifs}</span>',
     )
 
-    with open(path + f"templates/created_gifts/gift1.html", "w") as file:
+    with open(path + "templates/created_gifts/gift1.html", "w") as file:
         file.write(filedata)
     return error_code
 
@@ -97,7 +97,7 @@ async def handle_form(
     with start_transaction(op="task", name="proof_image_creator"):
         error_code = proof_creator(name, steamid, purchasedate)
     if error_code["error"] == False:
-        return created_templates.TemplateResponse(f"gift1.html", {"request": request})
+        return created_templates.TemplateResponse("gift1.html", {"request": request})
     else:
         return error_code
 
