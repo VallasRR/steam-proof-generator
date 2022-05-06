@@ -2,11 +2,10 @@ import json
 import requests
 import random
 import os
-from fastapi import FastAPI
+from fastapi import FastAPI, FastAPI, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import uvicorn
-from fastapi import FastAPI, Request, Form
 import sentry_sdk
 from sentry_sdk import start_transaction
 import os
@@ -74,7 +73,7 @@ def proof_creator(name, steamid, purchasedate):
         f'<span class="notification_count">{notifs}</span>',
     )
 
-    with open(path + f"templates/created_gifts/gift1.html", "w") as file:
+    with open(path + "templates/created_gifts/gift1.html", "w") as file:
         file.write(filedata)
     return error_code
 
