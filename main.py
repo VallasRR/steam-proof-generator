@@ -2,13 +2,12 @@ import json
 import requests
 import random
 import os
-from fastapi import FastAPI, FastAPI, Form, Request
+from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import uvicorn
 import sentry_sdk
 from sentry_sdk import start_transaction
-import os
 
 sentry_sdk.init(
     dsn=f"{sentry_key}",
