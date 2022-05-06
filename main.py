@@ -99,8 +99,7 @@ async def handle_form(
         error_code = proof_creator(name, steamid, purchasedate)
     if error_code["error"] == False:
         return created_templates.TemplateResponse(f"gift1.html", {"request": request})
-    else:
-        return error_code
+    return error_code
 
 
 sentry_key = os.getenv("sentry")
