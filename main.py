@@ -96,8 +96,8 @@ async def handle_form(
 ):
     with start_transaction(op="task", name="proof_image_creator"):
         error_code = proof_creator(name, steamid, purchasedate)
-    if error_code["error"] == False:
-        return created_templates.TemplateResponse("gift1.html", {"request": request})
+    if error_code["error"] is False:
+        return created_templates.TemplateResponse(f"gift1.html", {"request": request})
     else:
         return error_code
 
