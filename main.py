@@ -17,8 +17,6 @@ sentry_sdk.init(
 )
 
 path = "/root/steam_proof_creator-main/steam_auto_proof/"
-# path = '/Users/ideals/Documents/Python/steam_proof_creator-main/steam_auto_proof/'
-
 
 templates = Jinja2Templates(directory="templates")
 created_templates = Jinja2Templates(directory="templates/created_gifts")
